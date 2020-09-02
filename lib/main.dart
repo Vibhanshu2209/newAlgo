@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Colors.deepPurpleAccent,
+        appBar: CustomAppBar(),
         body: Container(
           margin: EdgeInsets.all(24),
           decoration: BoxDecoration(
