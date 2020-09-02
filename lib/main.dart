@@ -28,6 +28,13 @@ class MyApp extends StatelessWidget {
           ),
           title: Text('Data Structure and Algorithms'),
         ),
+        body: Container(
+          margin: EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: Colors.white70,
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+        ),
       )
     );
   }
