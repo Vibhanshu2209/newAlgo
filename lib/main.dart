@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
 
       ),
       home: Scaffold(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.deepPurpleAccent,
         appBar: AppBar(centerTitle:true,
           backgroundColor: Colors.white12,
           shape: RoundedRectangleBorder(
