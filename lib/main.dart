@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
         body: Container(
           margin: EdgeInsets.all(12),
           decoration: BoxDecoration(
+            shape: BoxShape.circle,
             border: Border.all(width: 4,color: Colors.white),
             color: Colors.black38,
-            borderRadius: BorderRadius.all(Radius.circular(16)),
           ),
         ),
       )
