@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,10 +30,11 @@ class MyApp extends StatelessWidget {
           title: Text('Data Structure and Algorithms'),
         ),
         body: Container(
-          margin: EdgeInsets.all(12),
+          margin: EdgeInsets.all(24),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            border: Border.all(width: 4,color: Colors.white),
+            gradient: LinearGradient(colors: [Colors.deepOrange,Colors.grey,Colors.blue]),
+            boxShadow: [BoxShadow(color: Colors.deepOrangeAccent,spreadRadius: 10,blurRadius: 20)],
             color: Colors.black38,
           ),
         ),
