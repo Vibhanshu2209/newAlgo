@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/CustomAppBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,23 +20,23 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Colors.deepPurpleAccent,
-        appBar: AppBar(centerTitle:true,
-          backgroundColor: Colors.white12,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.white70,width: 3.0),
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(10)
-            )
-          ),
-          title: Text('Data Structure and Algorithms'),
-        ),
         body: Container(
           margin: EdgeInsets.all(24),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: LinearGradient(colors: [Colors.deepOrange,Colors.grey,Colors.blue]),
-            boxShadow: [BoxShadow(color: Colors.deepOrangeAccent,spreadRadius: 10,blurRadius: 20)],
-            color: Colors.black38,
+            boxShadow: [
+              BoxShadow(
+                offset: new Offset(-10, -10),
+                color: Colors.white,spreadRadius: -5,blurRadius: 24),
+              BoxShadow(
+                  offset: new Offset(10, 10),
+                  color: Colors.black,spreadRadius: -5,blurRadius: 24),
+              ],
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.deepPurple.withAlpha(255),
+                  Colors.deepPurpleAccent.withAlpha(255)]),
           ),
         ),
       )
