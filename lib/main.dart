@@ -1,11 +1,10 @@
 import 'dart:html';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_app/CustomAppBar.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -14,21 +13,43 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-
       ),
       home: Scaffold(
-        backgroundColor: Colors.deepPurple,
-        appBar: AppBar(centerTitle:true,
-          backgroundColor: Colors.white12,
-          shape: RoundedRectangleBorder(
-            side: BorderSide(color: Colors.white70,width: 3.0),
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(10)
-            )
-          ),
-          title: Text('Data Structure and Algorithms'),
+        drawer:Drawer(
+          child:ListView(
+            padding:EdgeInsets.zero,
+            children:<Widget>[
+              DrawerHeader(
+                child:Text('CONTENTS',),
+                decoration: BoxDecoration(
+                  color:Colors.black54,
+                ),
+              ),
+              ExpansionTile(
+                title:Text('Data Structures'),
+                children:<Widget>[Text('Arrays'),Text("Linked Lists"),Text("Stack"),Text('Queues'),Text('Graphs'),Text('Trees')]
+              ),
+              ExpansionTile(
+                  title:Text('Algorithms'),
+                  children:<Widget>[Text("Greedy Algorithm"),Text("Recursive Algorithm"),Text('Backtracking Algorithm'),
+                    Text('Divide and Conquer'),Text('Brute Force Algorithm')]
+              ),
+            ]
+          )
         ),
-      )
+        appBar: AppBar(
+          backgroundColor: Colors.black54,
+          centerTitle: true,
+          title: Text('Data Structures and Algorithm',),
+
+        ),
+        body: Container(
+          constraints: BoxConstraints.expand(),
+          decoration: new BoxDecoration(
+            image:new DecorationImage(
+              image: new AssetImage('assets/images/bgimage1.jpg'), fit: BoxFit.cover,)),
+            ),
+          ),
     );
   }
 }
